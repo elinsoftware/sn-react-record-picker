@@ -4,15 +4,17 @@ import './index.css'
 import App from './App'
 import axios from 'axios'
 
-const username = process.env.REACT_APP_USER
-const password = process.env.REACT_APP_PASSWORD
-
-axios.defaults.auth = {
-    username,
-    password
+if (process.env.NODE_ENV === 'development') {
+    const username = process.env.REACT_APP_USER
+    const password = process.env.REACT_APP_PASSWORD
+    axios.defaults.auth = {
+        username,
+        password
+    }
+    axios.defaults.baseURL = 'http://localhost:3000'
+} else {
+    axios.defaults.headers["X-userToken"] = window.zToken;
 }
-
-axios.defaults.baseURL = 'http://localhost:3000'
 
 ReactDOM.render(<App />, document.getElementById('root'))
 

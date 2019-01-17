@@ -1,11 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="theme-color" content="#000000"/>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -16,11 +13,16 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Reference Field Demo</title>
+    <div style="display: none">
+      <g:evaluate object="true">
+        var token = gs.getSession().getSessionToken()?gs.getSession().session.getSessionToken():gs.getSessionToken();
+      </g:evaluate> 
+      <script>
+        window.zToken = "$[token]";
+      </script>
+    </div>
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
     <div id="root"></div>
   </body>
 </html>

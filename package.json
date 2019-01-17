@@ -25,5 +25,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "https://<instance-name>.service-now.com"
+  "proxy": "https://elinsoftwaredemo01.service-now.com"
 }

@@ -20,7 +20,7 @@ npm install
 
 In **package.json** add:
 ```json
-"proxy": "https:<instance-name>.service-now.com"
+"proxy": "https://<instance-name>.service-now.com"
 ```
 4. Add your ServiceNow instance account and password by creating an `.env` file
 
@@ -34,4 +34,23 @@ REACT_APP_PASSWORD=<your-password>
 npm start
 ```
 
-You're all set 🙂
+You're all set to run React app locally 🙂
+
+## Deploy to ServiceNow
+
+1. Build the application package
+```bash
+npm run build
+```
+2. For each .js and .css file from build/static folder create a Style Sheet record in ServiceNow, copy the corresponding code.
+3. Create UI page, set `Direct = True`. Copy HTML code from /build/index.html.
+4. Replace inline javascript code in HTML with a reference to the `runtime~main` code from the corresponding Style Sheet. The reference link should look like `[style_sheet_sys_id].cssdbx`
+3. Replace all other links with references to the corresponding Style Sheets.
+
+Your updated UI page should look like this:
+![uipage](/public/UI_page.png)
+
+You just deployed a React application to ServiceNow. 
+
+Open the UI page in a browser to see how the application works.
+
