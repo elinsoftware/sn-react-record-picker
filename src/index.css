@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+}
+body {
+  padding-top: 5rem;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.reference-field {
+  width: 400px;
+  transform: translate(-50%, 0);
+  margin-left: 50%;
+}
+
+.secondaryLabel {
+  opacity: .5;
+  font-size: .65em;
+  text-align: right;
+  margin-left: .5rem;
+}
+
+.dropdownItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
