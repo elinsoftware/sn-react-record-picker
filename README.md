@@ -10,7 +10,7 @@ The key idea for this reference field (record picker) implementation is to show 
 
 1. Clone this repository
 ```bash
-git clone https://github.com/vtaits/react-select-async-paginate.git
+git clone https://github.com/elinsoftware/sn-react-record-picker.git
 ```
 2. Install dependencies
 ```bash
